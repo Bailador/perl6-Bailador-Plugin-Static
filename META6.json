@@ -3,8 +3,11 @@
     "name"         : "Bailador::Plugin::Static",
     "version"      : "1.001001",
     "description"  : "Automatically serve static files",
-    "depends"      : [ "Bailador" ],
+    "depends"      : [ "Bailador", "MIME::Types" ],
     "test-depends" : [ "Test" ],
+    "resource"     : [
+        "mime.types"
+    ],
     "provides"     : {
         "Bailador::Plugin::Static" : "lib/Bailador/Plugin/Static.pm6"
     },
