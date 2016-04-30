@@ -5,9 +5,7 @@
     "description"  : "Automatically serve static files",
     "depends"      : [ "Bailador", "MIME::Types" ],
     "test-depends" : [ "Test" ],
-    "resource"     : [
-        "mime.types"
-    ],
+    "resources"    : [ "mime.types" ],
     "provides"     : {
         "Bailador::Plugin::Static" : "lib/Bailador/Plugin/Static.pm6"
     },
