@@ -8,6 +8,8 @@ Bailador::Plugin::Static - automatically serve static files
 use Bailador;
 use Bailador::Plugin::Static;
 
+Bailador::Plugin::Static.install; # set up the route
+
 ```
 
 # DESCRIPTION
@@ -20,13 +22,23 @@ working directory.
 The content type will be automatically detected from
 file's extension.
 
-# ENABLING THE FUNCTIONALITY
+# METHODS
+
+## `.install`
 
 ```perl6
 use Bailador::Plugin::Static;
+
+Bailador::Plugin::Static.install;
 ```
 
-Simply `use` the module to enable the functionality.
+Sets up the Bailador route that handles static files. If you need extra
+functionality at your `/assets/*` path, declare routes for it *before* calling
+`.install`. The route declared by this plugin is:
+
+```perl6
+    get rx{ ^ '/assets/' (.+) } => sub { ... }
+```
 
 ----
 
