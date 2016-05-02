@@ -12,6 +12,11 @@ Bailador::Plugin::Static.install; # set up the route
 
 ```
 
+# ALTERNATIVE
+
+NOTE: Bailador now includes `Bailador::Route::StaticFile` in core that offers
+more configuration than this module.
+
 # DESCRIPTION
 
 This module sets up a route to automatically serve static
